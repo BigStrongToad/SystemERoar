@@ -13,6 +13,7 @@ export default function ComboBox() {
       options={top100Films}
       sx={{ width: 300 }}
       renderInput={(params) => <TextField {...params} label="Movie" />}
+      
     />
   );
 }
