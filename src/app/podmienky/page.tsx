@@ -5,7 +5,7 @@ import Container from "@mui/material/Container";
 
 export const metadata = { title: "Podmienky | SystemERoar" };
 
-export default function About() {
+export default function Conditions() {
   return (
     <Container>
       <Typography> Podmienky používateľa </Typography>
