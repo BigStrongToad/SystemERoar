@@ -6,7 +6,7 @@ export const metadata = { title: "Virus | SystemERoar" };
 
 export default function Home() {
   return (
-    <Typography> Domovská hrianka 2 </Typography>
+    <Typography> Domovská hrianka </Typography>
   );
 }
 
