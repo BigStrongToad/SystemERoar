@@ -3,7 +3,7 @@
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
-export const metadata = { title: "Prihlásenie | SystemERoar" };
+export const metadata = { title: "prihlasenie | SystemERoar" };
 
 export default function SignUp() {
   return (

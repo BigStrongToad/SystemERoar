@@ -3,7 +3,7 @@
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
-export const metadata = { title: "Registrácia | SystemERoar" };
+export const metadata = { title: "registracia | SystemERoar" };
 
 export default function Registration() {
   return (
