@@ -1,22 +1,36 @@
-// src/app/auth/layout.tsx
+// src/app/(public)/auth/layout.tsx
 
-import { Box } from '@mui/material';
+// Material-UI imports
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
 
-export default function AuthLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <Box
+const AuthLayout = ({ children }: { children: React.ReactNode }) => (
+  <Box
+    sx={{
+      minHeight: '100vh',
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'background.default',
+      px: 2,
+    }}
+  >
+    <Container
+      maxWidth="xs"
       sx={{
-        minHeight: '100vh', // Ensure it takes up the full viewport height
         display: 'flex',
-        justifyContent: 'center', // Horizontally center
-        alignItems: 'center', // Vertically center
+        flexDirection: 'column',
+        alignItems: 'center',
+        p: 3,
+        bgcolor: 'background.paper',
+        boxShadow: 3,
+        borderRadius: 2,
       }}
     >
       {children}
-    </Box>
-  );
-}
+    </Container>
+  </Box>
+);
+
+export default AuthLayout;
+

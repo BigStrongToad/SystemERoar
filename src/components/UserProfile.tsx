@@ -8,12 +8,12 @@ export default function UserProfile() {
     const { data: session } = useSession();
 
     if (!session) {
-        return <p>Non signed in</p>;
+        return <p>NEPRIHLÁSENÝ</p>;
     }
 
     return (
         <div>
-            <p>Signed as: {session.user?.name}</p>
+            <p>Prihlásený ako {session.user?.name}</p>
         </div>
     );
 }

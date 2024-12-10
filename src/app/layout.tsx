@@ -4,9 +4,10 @@ import { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import AuthProvider from "../components/AuthProvider";
+import {ThemeProvider} from "../components/ThemeContext";
 
 export const metadata: Metadata = {
-  title: "SystemERoar",
+  title: "Grindr",
   description: "Created by students of SPŠE Zochova 9, Bratislava",
 };
 
@@ -19,12 +20,14 @@ export default function RootLayout({
     <html lang="sk">
       <body>
         <AuthProvider>
-          <div style={{ minHeight: '92vh', display: 'flex', flexDirection: 'column' }}>
-            <main style={{ flexGrow: 1 }}>
-              {children}
-            </main>
-          </div>
-          <Navbar /> {/* Moved Navbar outside of the main container */}
+          <ThemeProvider>
+            <div style={{ minHeight: '92vh', display: 'flex', flexDirection: 'column' }}>
+              <main style={{ flexGrow: 1 }}>
+                {children}
+              </main>
+            </div>
+            <Navbar /> {/* Moved Navbar outside of the main container */}
+          </ThemeProvider>
         </ AuthProvider>
       </body>
     </html>
